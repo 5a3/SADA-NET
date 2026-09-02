@@ -2,9 +2,12 @@
 <html lang="ar">
 <head>
 <meta charset="utf-8"/>
-<meta name="theme-color" content="#f4f7f4">
-<title>صدى نت</title>
+<meta name="theme-color" content="#eef9f3">
+<title>شبكة صدى نت | بوابة الدخول</title>
 <meta content="width=device-width, initial-scale=1, user-scalable=yes" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
 </head>
@@ -19,6 +22,12 @@
 <p class="welcome-friday">مبارك عليكم يوم الجمعة، وأكثروا من الصلاة والسلام على النبي محمد صلى الله عليه وسلم.</p>
 <p class="welcome-free">صلوا عليه وسلموا تسليما <b dir="ltr"></b>.</p>
 <button class="welcome-continue" id="welcomeContinueBtn" type="button">متابعة</button>
+</div>
+</div>
+<div aria-hidden="true" class="ad-lightbox-overlay" id="adLightboxOverlay">
+<div class="ad-lightbox-card">
+<button class="ad-lightbox-close" id="adLightboxClose" type="button" aria-label="إغلاق">&times;</button>
+<img id="adLightboxImg" src="" alt="صورة الإعلان">
 </div>
 </div>
 <div class="login" id="login">
@@ -41,14 +50,20 @@
 </button>
 </div>
 </div>
-            <div class="ads-marquee-container glossy-frame">
-                <div class="ads-track">
-                    <a href="https://wa.me/967776964570"><img src="img/ad1.jpg" alt="إعلان 1" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad2.jpg" alt="إعلان 2" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad3.jpg" alt="إعلان 3" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad1.jpg" alt="إعلان 1" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad2.jpg" alt="إعلان 2" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad3.jpg" alt="إعلان 3" loading="lazy" decoding="async" fetchpriority="low"></a>
+            <div class="ads-marquee-container glossy-frame" id="adsMarqueeContainer">
+                <div class="ads-track" id="adsTrack">
+                    <a href="https://wa.me/967776964570"><img src="img/ad1.jpg" alt="إعلان 1" decoding="async"></a>
+                    <a href="https://wa.me/967776964570"><img src="img/ad2.jpg" alt="إعلان 2" decoding="async"></a>
+                    <a href="https://wa.me/967776964570"><img src="img/ad3.jpg" alt="إعلان 3" decoding="async"></a>
+                </div>
+                <div class="ads-fallback-banner" id="adsFallbackBanner">
+                    <div class="ads-fallback-content">
+                        <span class="ads-fallback-icon icon-wifi"></span>
+                        <div class="ads-fallback-text">
+                            <strong>شبكة صدى نت الفضائية</strong>
+                            <small>تغطية ممتازة وسرعة عالية في جميع المناطق</small>
+                        </div>
+                    </div>
                 </div>
             </div>
 
