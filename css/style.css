@@ -115,80 +115,86 @@ button {
   margin-top: 18px;
 }
 
-/* Brand Header Frame */
+/* Brand Header Frame - Hero Logo Layout */
 .brand-frame {
-  padding: 18px 16px 20px;
+  padding: 10px 14px 12px;
   background: linear-gradient(180deg, #ffffff 0%, #f6fcf8 100%);
+  border-radius: 20px;
+}
+
+.brand-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 6px;
 }
 
 .brand-dates {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  margin: 0;
+}
+
+#gregorianDate,
+#hijriDate {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  margin: 0 auto 12px;
-  padding: 6px 14px;
+  gap: 4px;
+  padding: 3px 8px;
   border: 1px solid var(--card-border);
-  border-radius: 999px;
+  border-radius: 8px;
   background: var(--emerald-soft);
-  color: var(--emerald-main);
-  font-size: 12px;
+  color: var(--emerald-dark);
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  line-height: 1.2;
 }
 
-.brand-dates span {
+.date-label {
+  color: var(--emerald-main);
+  font-weight: 800;
+  font-size: 10px;
+}
+
+#gregorianDate b,
+#hijriDate b {
+  color: var(--emerald-dark);
+  font-size: 10.5px;
+  font-weight: 700;
+  direction: ltr;
   display: inline-block;
-}
-
-.brand-dates span + span {
-  position: relative;
-}
-
-.brand-dates span + span::before {
-  content: "";
-  width: 1px;
-  height: 12px;
-  position: absolute;
-  top: 50%;
-  right: -7px;
-  transform: translateY(-50%);
-  background: rgba(0, 137, 82, 0.22);
 }
 
 .logo {
   width: 100%;
-  height: 240px;
-  margin: 4px auto;
+  max-width: 250px;
+  height: 98px;
+  margin: 2px auto 0;
   background: url(../img/logo.png) center / contain no-repeat;
-  filter: drop-shadow(0 6px 16px rgba(0, 137, 82, 0.12));
-}
-
-.brand-divider {
-  width: 80%;
-  height: 2px;
-  margin: 14px auto 16px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #81c784, var(--emerald-main), transparent);
+  filter: drop-shadow(0 4px 14px rgba(0, 137, 82, 0.16));
 }
 
 .brand-actions {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
 }
 
 .brand-action {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  padding: 8px 4px;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
   border: 1px solid var(--card-border);
-  border-radius: 16px;
+  border-radius: 10px;
   outline: none;
   background: var(--emerald-soft-2);
   color: var(--text-primary);
@@ -209,29 +215,21 @@ button {
 
 .brand-action-icon {
   display: inline-block;
-  font-size: 26px;
+  font-size: 16px;
   line-height: 1;
 }
 
-.brand-call .brand-action-icon {
-  color: var(--emerald-main);
-}
+.brand-call .brand-action-icon { color: var(--emerald-main); }
+.brand-whatsapp .brand-action-icon { color: #25d366; }
+.brand-info .brand-action-icon { color: var(--gold-accent); }
 
-.brand-whatsapp .brand-action-icon {
-  color: #25d366;
-}
-
-.brand-info .brand-action-icon {
-  color: var(--gold-accent);
-}
-
-/* Marquee Ads Track */
+/* Marquee Ads Track - Compact Sizing */
 .ads-marquee-container {
   width: 100%;
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   overflow: hidden;
   border: 1px solid var(--card-border);
-  border-radius: 22px;
+  border-radius: 16px;
   background: #ffffff;
   box-shadow: var(--card-shadow);
 }
@@ -307,9 +305,9 @@ button {
 
 .ads-track {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   width: max-content;
-  padding: 12px 0;
+  padding: 8px 0;
   animation: scrollAds 20s linear infinite;
 }
 
@@ -324,11 +322,11 @@ button {
 
 .ads-track img {
   display: block;
-  width: 260px;
-  height: 155px;
+  width: 180px;
+  height: 96px;
   object-fit: cover;
   border: 1px solid var(--card-border);
-  border-radius: 16px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -390,7 +388,7 @@ button {
 
 /* Hero Login Card Frame */
 .login-frame {
-  padding: 30px 16px 24px;
+  padding: 16px 14px 16px;
   background: #ffffff;
 }
 
@@ -410,13 +408,13 @@ button {
   justify-content: center;
   gap: 8px;
   width: 92%;
-  min-height: 44px;
-  margin: 0 auto 18px;
+  min-height: 38px;
+  margin: 0 auto 12px;
   border: 1px solid var(--card-border-strong);
-  border-radius: 16px;
+  border-radius: 14px;
   background: var(--emerald-soft);
   color: var(--emerald-dark);
-  font-size: 16px;
+  font-size: 14.5px;
   font-weight: 800;
 }
 
@@ -510,7 +508,7 @@ button {
 
 .login-field {
   width: 94%;
-  margin: 0 auto 16px;
+  margin: 0 auto 12px;
   position: relative;
 }
 
@@ -518,29 +516,29 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 7px;
+  right: 7px;
   z-index: 1;
-  border-radius: 14px;
+  border-radius: 12px;
   background: var(--emerald-soft);
   color: var(--emerald-main);
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .login-input {
   width: 100%;
-  height: 64px;
-  padding: 0 64px 0 16px;
+  height: 54px;
+  padding: 0 54px 0 14px;
   border: 1.5px solid var(--card-border-strong);
-  border-radius: 18px;
+  border-radius: 16px;
   outline: none;
   background: #ffffff;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
   color: var(--emerald-dark);
-  font-size: 18px;
+  font-size: 16.5px;
   font-weight: 700;
   letter-spacing: 0.8px;
   transition: all 0.3s ease;
@@ -553,7 +551,7 @@ button {
 
 ::placeholder {
   color: #8bb0a0;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -598,7 +596,7 @@ button {
   background: linear-gradient(135deg, var(--neon-green) 0%, var(--emerald-main) 100%);
   box-shadow: var(--glow-shadow);
   color: #ffffff;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -607,9 +605,9 @@ button {
 .login-submit {
   display: block;
   width: 94%;
-  height: 60px;
-  margin: 18px auto 0;
-  border-radius: 18px;
+  height: 52px;
+  margin: 12px auto 0;
+  border-radius: 16px;
 }
 
 .login-submit:hover,
